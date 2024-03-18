@@ -8,21 +8,37 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="BASIC UNIT CONVERSION"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <TextView
         android:id="@+id/unit_type_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
         android:text="Unit Type" />
 
     <Spinner
         android:id="@+id/unit_type_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/unit_types" />
+        android:entries="@array/unit_types"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
 
     <TextView
         android:id="@+id/source_unit_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
         android:text="Source Unit" />
 
     <Spinner
@@ -35,6 +51,8 @@
         android:id="@+id/destination_unit_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
         android:text="Destination Unit" />
 
     <Spinner
@@ -43,26 +61,31 @@
         android:layout_height="wrap_content"
         android:entries="@array/length_units" />
 
+
     <EditText
         android:id="@+id/value_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:hint="Enter value to convert"/>
+        android:hint="Enter value to convert"
+        android:inputType="numberDecimal" />
 
 
     <Button
         android:id="@+id/convert_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Convert"/>
+        android:layout_gravity="center"
+        android:text="Convert"
+        android:textAlignment="center" />
 
 
     <TextView
         android:id="@+id/result_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Converted Value"/>
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Converted Value" />
 
     <LinearLayout
         android:layout_width="match_parent"

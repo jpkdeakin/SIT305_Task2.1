@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Spinner;
-import org.w3c.dom.Text;
 
 import java.util.Locale;
 
@@ -23,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     Spinner unitTypeSpinner;
     Spinner sourceUnitSpinner;
     Spinner destUnitSpinner;
-
     ArrayAdapter<String> arrayLengthUnits;
     ArrayAdapter<String> arrayWeightUnits;
     ArrayAdapter<String> arrayTempUnits;
@@ -43,15 +41,15 @@ public class MainActivity extends AppCompatActivity {
         unitTypeSpinner = findViewById(R.id.unit_type_spinner);
 
         // Allocating resources for unit arrays
-        ArrayAdapter<String> arrayLengthUnits = new ArrayAdapter<>(
+        arrayLengthUnits = new ArrayAdapter<>(
                 this,android.R.layout.simple_spinner_dropdown_item,
                 getResources().getStringArray(R.array.length_units));
 
-        ArrayAdapter<String> arrayWeightUnits = new ArrayAdapter<>(
+        arrayWeightUnits = new ArrayAdapter<>(
                 this,android.R.layout.simple_spinner_dropdown_item,
                 getResources().getStringArray(R.array.weight_units));
 
-        ArrayAdapter<String> arrayTempUnits = new ArrayAdapter<>(
+        arrayTempUnits = new ArrayAdapter<>(
                 this,android.R.layout.simple_spinner_dropdown_item,
                 getResources().getStringArray(R.array.temp_units));
 
@@ -231,7 +229,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     static Double tempConversion(String source, String dest, Double value) {
-        // Convert to Celcius
+        // Convert to Celsius
         switch(source) {
             case "Fahrenheit":
                 value = (value - 32) / 1.8;
@@ -243,7 +241,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
-        // Convert Celcius to destination unit
+        // Convert Celsius to destination unit
         switch(dest) {
             case "Fahrenheit":
                 value = (value * 1.8) + 32;

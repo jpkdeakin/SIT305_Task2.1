@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string-array name="unit_types">
+        <item>Length</item>
+        <item>Weight</item>
+        <item>Temperature</item>
+    </string-array>
+
     <string-array name="length_units">
         <item>Inches</item>
         <item>Feet</item>
@@ -9,4 +16,20 @@
         <item>Meters</item>
         <item>Kilometers</item>
     </string-array>
+
+    <string-array name="weight_units">
+        <item>Ounce</item>
+        <item>Pound</item>
+        <item>Ton</item>
+        <item>Gram</item>
+        <item>Kilogram</item>
+        <item>Tonne</item>
+    </string-array>
+
+    <string-array name="temp_units">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+        <item>Kelvin</item>
+    </string-array>
+
 </resources>
